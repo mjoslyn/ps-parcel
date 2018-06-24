@@ -5,7 +5,7 @@ import Main from "./output/Main";
 
 function main() {
   const myComponent = React.createElement(Main.example, { label: "Increment" });
-
+  console.log(Main)
   ReactDOM.render(myComponent, document.getElementById("app"));
 }
 
