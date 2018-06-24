@@ -1,0 +1,9 @@
+{
+  "name": "some-ps-thing",
+  "set": "psc-0.12.0-20180621",
+  "source": "https://github.com/purescript/package-sets.git",
+  "depends": [
+    "react-basic",
+    "prelude"
+  ]
+}

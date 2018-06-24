@@ -1,0 +1,46 @@
+module Main where
+
+import Prelude
+
+import React.Basic (ReactComponent, react)
+import React.Basic.DOM as R
+import React.Basic.Events as Events
+
+type ExampleProps =
+  { label :: String
+  }
+
+type ExampleState =
+  { counter :: Int
+  }
+
+example :: ReactComponent ExampleProps
+example = react
+  { displayName: "example"
+  , initialState
+  , receiveProps
+  , render
+  }
+  where
+    initialState :: ExampleState
+    initialState = { counter: 0 }
+    receiveProps _ _ _ = pure unit
+
+    render { label } { counter } setState =
+      let
+        hello =
+          R.h1 { children: [ R.text "Hello World" ]}
+        button =
+          R.button
+            { onClick: Events.handler_ (setState \s -> s { counter = s.counter + 1}) 
+            , children:
+                [ R.text (label <> ": " <> show counter)
+                ]
+            }
+      in
+        R.div
+          { children:
+              [ hello
+              , button
+              ]
+          }
