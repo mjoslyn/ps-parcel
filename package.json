@@ -8,8 +8,8 @@
   },
   "scripts": {
     "dev": "parcel index.html",
-    "build": "./node_modules/.bin/pulp build --skip-entry-point --to output/Main/index.js && parcel build index.html",
-    "postinstall": "./node_modules/.bin/psc-package install"
+    "build": "pulp build --skip-entry-point --to output/Main/index.js && parcel build index.html",
+    "postinstall": "psc-package install"
   },
   "author": "",
   "license": "MIT",
@@ -17,6 +17,8 @@
     "bower": "^1.8.4",
     "parcel-bundler": "^1.9.2",
     "psc-package": "^0.3.2",
+    "pulp": "^12.3.0",
+    "purescript": "^0.12.0",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
     "react-hot-loader": "^4.0.1"
