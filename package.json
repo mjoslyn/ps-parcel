@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "parcel index.html",
     "build": "./node_modules/.bin/pulp build --skip-entry-point --to output/Main/index.js && parcel build index.html",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "./node_modules/.bin/psc-package install"
   },
   "author": "",
   "license": "MIT",
