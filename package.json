@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "parcel index.html",
-    "build": "pulp build --to dist/ps.js && parcel build index.html",
+    "build": "./node_modules/.bin/pulp build --skip-entry-point --to output/Main/index.js && parcel build index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
