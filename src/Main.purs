@@ -16,7 +16,7 @@ type ExampleState =
 
 example :: ReactComponent ExampleProps
 example = react
-  { displayName: "example"
+  { displayName: "Example"
   , initialState
   , receiveProps
   , render

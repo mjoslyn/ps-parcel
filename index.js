@@ -1,12 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import Main from "./output/Main";
+import App from './src/App'
 
 function main() {
-  const myComponent = React.createElement(Main.example, { label: "Increment" });
-  console.log(Main)
-  ReactDOM.render(myComponent, document.getElementById("app"));
+  //const myComponent = React.createElement(Main.example, { label: "Increment" });
+  ReactDOM.render(<App/>, document.getElementById("app"));
 }
 
 if (module.hot) {
