@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "parcel index.html",
     "build": "pulp build && parcel build index.html",
-    "build:optimise-todo":  "pulp build --skip-entry-point --to ./output/Main/index.js && parcel build index.html",
+    "build:optimise-todo": "pulp build --skip-entry-point --to ./output/Main/index.js && parcel build index.html",
     "postinstall": "psc-package install"
   },
   "author": "",
@@ -23,5 +23,8 @@
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
     "react-hot-loader": "^4.0.1"
+  },
+  "dependencies": {
+    "react-loadable": "^5.4.0"
   }
 }
