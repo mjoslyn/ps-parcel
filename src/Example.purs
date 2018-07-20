@@ -2,9 +2,10 @@ module Example where
 
 import Prelude
 
-import React.Basic (ReactComponent, react)
+import React.Basic (ReactComponent, createElement, react)
 import React.Basic.DOM as R
 import React.Basic.Events as Events
+import Test (test)
 
 type ExampleProps =
   { label :: String
@@ -41,6 +42,7 @@ example = react
         R.div
           { children:
               [ hello
+              , createElement test { path: "Handsome"}
               , button
               ]
           }
