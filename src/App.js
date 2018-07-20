@@ -2,11 +2,6 @@ import React from 'react'
 
 import Loadable from 'react-loadable';
 
-const Loading = () => <div>Loading</div>
+import {example as Example} from '../output/Example'
 
-const LoadableComponent = Loadable({
-  loader: () => import('../output/Example').then(x => {console.log(x);return x.example}),
-  loading: Loading,
-})
-
-export default ({children}) => <div>HI<div>{children}<LoadableComponent/></div></div>
+export default ({children}) => <div>HI<div>{children}<Example/></div></div>
